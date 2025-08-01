@@ -21,10 +21,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate status site
-        uses: upptime/uptime-monitor
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          gh_token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: '18'
+
+      - name: Install Upptime
+        run: npm install -g @upptime/core
+
+      - name: Generate status site
+        run: npx @upptime/core update-site
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
