@@ -1,0 +1,21 @@
+sites:
+  - name: AxialData Présentation
+    url: https://www.axialdata.net/presentation
+    method: GET
+    expectStatus: 200
+    followRedirects: true
+    maxResponseTime: 3000
+    assert:
+      contains: "A propos de axialdata"
+
+  - name: CD Arbitration
+    url: https://www.cdarbitration.com
+    expectStatus: 200
+    followRedirects: true
+    maxResponseTime: 3000
+
+  - name: CFF API Endpoint
+    url: https://cff-to-pdf-api.fly.dev/api/v2/webhook/connect
+    expectStatus: 200
+    followRedirects: true
+    maxResponseTime: 3000
