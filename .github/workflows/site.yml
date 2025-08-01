@@ -21,8 +21,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Upptime CLI
-        run: npm install -g @upptime/cli
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Upptime
+        run: npm install -g upptime
 
       - name: Generate status site
         run: upptime update-site
