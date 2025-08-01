@@ -1,5 +1,5 @@
 sites:
-  - name: AxialData Présentation
+  - name: axialdata Présentation
     url: https://www.axialdata.net/presentation
     method: GET
     expectStatus: 200
