@@ -19,3 +19,12 @@ sites:
     expectStatus: 200
     followRedirects: true
     maxResponseTime: 3000
+
+status-website:
+  name: "Upptime Status"
+  url: "https://pierre-yves.github.io/upptime_monitor"
+  template: "upptime"
+  baseUrl: "/upptime_monitor"
+  introTitle: "Bienvenue sur notre page de statut"
+  introMessage: "Cette page affiche le statut de nos services en temps réel."
+  autoDeploy: true
